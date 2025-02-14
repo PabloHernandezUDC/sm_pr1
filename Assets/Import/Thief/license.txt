@@ -1,0 +1,11 @@
+Model Information:
+* title:	Thief
+* source:	https://sketchfab.com/3d-models/thief-bc30c941a4b7452b89ae8dbd1ed08d7d
+* author:	NK (https://sketchfab.com/yucelcagan0)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Thief" (https://sketchfab.com/3d-models/thief-bc30c941a4b7452b89ae8dbd1ed08d7d) by NK (https://sketchfab.com/yucelcagan0) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

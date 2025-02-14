@@ -1,0 +1,11 @@
+Model Information:
+* title:	Wayne Thief
+* source:	https://sketchfab.com/3d-models/wayne-thief-da661eb8bf2944ce99fb08faf46f70a8
+* author:	savounited (https://sketchfab.com/savounited)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Wayne Thief" (https://sketchfab.com/3d-models/wayne-thief-da661eb8bf2944ce99fb08faf46f70a8) by savounited (https://sketchfab.com/savounited) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
