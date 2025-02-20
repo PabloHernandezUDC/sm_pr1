@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old Industrial Building
+* source:	https://sketchfab.com/3d-models/old-industrial-building-0dafa7aaadfd4666bb4a32776c84b14e
+* author:	Hrvoje Wächter (https://sketchfab.com/gazdahrco)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old Industrial Building" (https://sketchfab.com/3d-models/old-industrial-building-0dafa7aaadfd4666bb4a32776c84b14e) by Hrvoje Wächter (https://sketchfab.com/gazdahrco) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

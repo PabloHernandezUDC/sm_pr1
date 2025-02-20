@@ -1,0 +1,11 @@
+Model Information:
+* title:	Warehouses
+* source:	https://sketchfab.com/3d-models/warehouses-e6e105d35b3f486292c42ffa52f363c0
+* author:	99.Miles (https://sketchfab.com/Mazen220)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Warehouses" (https://sketchfab.com/3d-models/warehouses-e6e105d35b3f486292c42ffa52f363c0) by 99.Miles (https://sketchfab.com/Mazen220) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
