@@ -1,0 +1,11 @@
+Model Information:
+* title:	RDA Base (Oilrig)
+* source:	https://sketchfab.com/3d-models/rda-base-oilrig-8fde590994b5410fa54c524e05891019
+* author:	Garecra (https://sketchfab.com/Garecra)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "RDA Base (Oilrig)" (https://sketchfab.com/3d-models/rda-base-oilrig-8fde590994b5410fa54c524e05891019) by Garecra (https://sketchfab.com/Garecra) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

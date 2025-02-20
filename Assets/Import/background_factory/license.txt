@@ -1,0 +1,11 @@
+Model Information:
+* title:	background factory
+* source:	https://sketchfab.com/3d-models/background-factory-ff12e33d1dc844c8ae03c37259b12e94
+* author:	spicybamer (https://sketchfab.com/smitecraft.swe)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "background factory" (https://sketchfab.com/3d-models/background-factory-ff12e33d1dc844c8ae03c37259b12e94) by spicybamer (https://sketchfab.com/smitecraft.swe) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

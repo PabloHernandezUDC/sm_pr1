@@ -1,0 +1,11 @@
+Model Information:
+* title:	Gas / Oil Tank / Refinery / Storage
+* source:	https://sketchfab.com/3d-models/gas-oil-tank-refinery-storage-f386d1acb6eb4e8dbdd6fa19d2ce801e
+* author:	burnedhrum (https://sketchfab.com/burnedhrum)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Gas / Oil Tank / Refinery / Storage" (https://sketchfab.com/3d-models/gas-oil-tank-refinery-storage-f386d1acb6eb4e8dbdd6fa19d2ce801e) by burnedhrum (https://sketchfab.com/burnedhrum) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
