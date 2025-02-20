@@ -1,0 +1,11 @@
+Model Information:
+* title:	Genesee Towers, Flint, Michigan, USA
+* source:	https://sketchfab.com/3d-models/genesee-towers-flint-michigan-usa-b0da186728fa40228f7194df529d86c0
+* author:	Big Jojo (https://sketchfab.com/big_jojo)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Genesee Towers, Flint, Michigan, USA" (https://sketchfab.com/3d-models/genesee-towers-flint-michigan-usa-b0da186728fa40228f7194df529d86c0) by Big Jojo (https://sketchfab.com/big_jojo) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Industrial Building
+* source:	https://sketchfab.com/3d-models/industrial-building-73eba47d306d47a5b7eba64f7ba73f92
+* author:	arielsoler (https://sketchfab.com/arielsoler)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Industrial Building" (https://sketchfab.com/3d-models/industrial-building-73eba47d306d47a5b7eba64f7ba73f92) by arielsoler (https://sketchfab.com/arielsoler) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
