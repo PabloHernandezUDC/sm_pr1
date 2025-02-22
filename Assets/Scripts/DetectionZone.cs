@@ -4,12 +4,14 @@ using UnityEngine.AI;
 public class DetectionZone
     : MonoBehaviour
 {
+    Guard parent;
     NavMeshAgent parentAgent;
 
     // Start is called before the first frame update
     void Start()
     {
-        parentAgent = GetComponentInParent<NavMeshAgent>();
+        parent = this.transform.parent.GetComponent<Guard>();
+        parentAgent = parent.GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -19,9 +21,15 @@ public class DetectionZone
     {
         if (other.name == "Thief")
         {
-            parentAgent.isStopped = true;
-            other.gameObject.GetComponent<Thief>().movementSpeed = 0f; // creo que esto es una barbaridad
+            parent.patrolling = false;
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.name == "Thief")
+        {
+            parent.chase_time = 0;
+        }
+    }
 }

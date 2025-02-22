@@ -9,10 +9,14 @@ public class Guard : MonoBehaviour
     Transform trans;
     NavMeshAgent agent;
     public List<Transform> targets;
+    public Thief thief;
 
     int current_target;
-    int N_OF_TARGETS;
+    int n_of_targets;
 
+    public bool patrolling;
+    public float chase_time;
+    public int max_chase_time;
 
     // Start is called before the first frame update
     void Start()
@@ -22,16 +26,30 @@ public class Guard : MonoBehaviour
         agent.destination = targets.First().position;
 
         current_target = 0;
-        N_OF_TARGETS = targets.Count;
+        n_of_targets = targets.Count;
+        patrolling = true;
+        chase_time = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (trans.position.x == agent.destination.x && trans.position.z == agent.destination.z)
+        if (patrolling)
         {
-            current_target++;
-            agent.destination = targets[current_target  % N_OF_TARGETS].position;
-        }            
+            if (trans.position.x == agent.destination.x && trans.position.z == agent.destination.z)
+            {
+                current_target++;
+                agent.destination = targets[current_target  % n_of_targets].position;
+            }            
+        }
+        else
+        {
+            agent.destination = thief.transform.position;
+            chase_time += Time.deltaTime;
+            if (chase_time >= max_chase_time)
+            {
+                patrolling = true;
+            }
+        }
     }
 }

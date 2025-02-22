@@ -14,7 +14,6 @@ public class Prize : MonoBehaviour
     {
         if (other.name == "Thief")
         {
-            print("Premio robado");
             Destroy(this.gameObject); // puede que esto también sea una barbaridad
         }
     }
