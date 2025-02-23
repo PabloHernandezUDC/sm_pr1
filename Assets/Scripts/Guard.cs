@@ -81,28 +81,26 @@ public class Guard : MonoBehaviour
                 Ray ray = new Ray(transform.position, directionToTarget);
                 RaycastHit hit;
 
-                // dibujamos el rayo
-                var points = new Vector3[2];
-                points[0] = transform.position;
 
                 if (Physics.Raycast(ray, out hit, distanceToTarget, obstructionMask))
                 {
-                    // la vista está obstruida y solo dibujamos hasta la pared
+                    // la vista está obstruida
                     canSeePlayer = false;
-                    points[1] = hit.point;
                 }
                 else
                 {
-                    // lo vemos sin obstrucciones y dibujamos hasta el jugador
+                    // lo vemos sin obstrucciones
                     canSeePlayer = true;
                     patrolling = false;
                     chase_time = 0;
-                    points[1] = target.position;
-                }
 
-                // "activamos" la línea para dibujarla y le pasamos las coordenadas
-                line.enabled = true;
-                line.SetPositions(points);
+                    // y dibujamos la línea hasta el jugador
+                    var points = new Vector3[2];
+                    points[0] = transform.position;
+                    points[1] = target.position;
+                    line.enabled = true;
+                    line.SetPositions(points);
+                }
             }
             else
                 canSeePlayer = false;
