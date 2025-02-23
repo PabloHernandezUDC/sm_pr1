@@ -7,16 +7,29 @@ using UnityEngine.AI;
 
 public class Guard : MonoBehaviour
 {
+    /*
+    
+    Comportamiento del agente guardia:
+
+    IF      el ladrón está lo bastante cerca    THEN lo captura
+    ELSE IF ve al ladrón                        THEN lo persigue
+    ELSE IF ha visto al ladrón                  THEN patrulla cerca del premio
+    ELSE                                             patrulla con normalidad
+    
+    */
+
     public float radius;
     [Range(0, 360)]
     public float angle;
 
     public GameObject thief;
+    public GameObject guarded_prize;
 
-    public LayerMask targetMask;
-    public LayerMask obstructionMask;
+    public LayerMask target_mask;
+    public LayerMask obstruction_mask;
 
-    bool canSeePlayer;
+    bool can_see_player;
+    bool alert_mode;
     LineRenderer line;
 
     Transform trans;
@@ -65,7 +78,7 @@ public class Guard : MonoBehaviour
     {
         line.enabled = false;
         // comprobamos si hay un jugador en nuestro radio
-        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
+        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, target_mask);
 
         if (rangeChecks.Length != 0)
         {
@@ -82,15 +95,15 @@ public class Guard : MonoBehaviour
                 RaycastHit hit;
 
 
-                if (Physics.Raycast(ray, out hit, distanceToTarget, obstructionMask))
+                if (Physics.Raycast(ray, out hit, distanceToTarget, obstruction_mask))
                 {
                     // la vista está obstruida
-                    canSeePlayer = false;
+                    can_see_player = false;
                 }
                 else
                 {
                     // lo vemos sin obstrucciones
-                    canSeePlayer = true;
+                    can_see_player = true;
                     patrolling = false;
                     chase_time = 0;
 
@@ -100,20 +113,30 @@ public class Guard : MonoBehaviour
                     points[1] = target.position;
                     line.enabled = true;
                     line.SetPositions(points);
+
+                    // cambiamos a la segunda patrulla (entre el primer punto y el premio asignado)
+                    if (alert_mode == false)
+                    {
+                        alert_mode = true;
+                        agent.speed *= 1.2f;
+                        patrol_points.RemoveRange(1, patrol_points.Count - 1);
+                        patrol_points.Add(guarded_prize.transform);
+                        n_of_targets = patrol_points.Count;
+                    }
                 }
             }
             else
-                canSeePlayer = false;
+                can_see_player = false;
         }
-        else if (canSeePlayer) // si lo hemos dejado de ver, cambiamos el valor
-            canSeePlayer = false;
+        else if (can_see_player) // si lo hemos dejado de ver, cambiamos el valor
+            can_see_player = false;
     }
 
     void Update()
     {
         if (patrolling)
         {
-            // si hemos llegado, pasamos al siguiente
+            // si hemos llegado a un destino, pasamos al siguiente
             if (trans.position.x == agent.destination.x && trans.position.z == agent.destination.z)
             {
                 current_target++;
@@ -122,7 +145,7 @@ public class Guard : MonoBehaviour
         }
         else
         {
-            // si ha pasado demasiado tiempo, volvemos a patrullar
+            // si ha pasado demasiado tiempo, dejamos de perseguir volvemos a patrullar
             if (chase_time >= max_chase_time)
             {
                 patrolling = true;

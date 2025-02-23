@@ -5,11 +5,14 @@ using UnityEngine;
 public class Prize : MonoBehaviour
 {
     EscapeDoor parent_door;
+    Renderer rend;
+    bool picked_up;
 
     // Start is called before the first frame update
     void Start()
     {
         parent_door = GetComponentInParent<EscapeDoor>();
+        rend = GetComponent<Renderer>();
     }
    
     // Update is called once per frame
@@ -17,9 +20,11 @@ public class Prize : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Thief")
+        if (other.name == "Thief" && picked_up == false)
         {
-            Destroy(this.gameObject);
+            picked_up = true;
+            //Destroy(this.gameObject);
+            rend.enabled = false;
             parent_door.prizes.Remove(this);
         }
     }

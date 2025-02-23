@@ -2866,12 +2866,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 10
-  angle: 180
+  angle: 150
   thief: {fileID: 77868402}
-  targetMask:
+  guarded_prize: {fileID: 438980072}
+  target_mask:
     serializedVersion: 2
     m_Bits: 64
-  obstructionMask:
+  obstruction_mask:
     serializedVersion: 2
     m_Bits: 8
   patrol_points:
