@@ -2867,6 +2867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 10
   angle: 150
+  capture_range: 1
   thief: {fileID: 77868402}
   guarded_prize: {fileID: 438980072}
   target_mask:
@@ -2880,6 +2881,8 @@ MonoBehaviour:
   - {fileID: 1867680042}
   - {fileID: 1959909530}
   - {fileID: 86659813}
+  mat1: {fileID: 2100000, guid: 76c98b6cdcb5acc438e9d17ef3740924, type: 2}
+  mat2: {fileID: 2100000, guid: 97c5acd5b1f185e4eaa63011c9ff6eaa, type: 2}
   max_chase_time: 2
 --- !u!1 &705507993
 GameObject:
