@@ -2869,7 +2869,6 @@ MonoBehaviour:
   - {fileID: 1867680042}
   - {fileID: 1959909530}
   - {fileID: 86659813}
-  chase_time: 0
   max_chase_time: 2
 --- !u!1 &705507993
 GameObject:
