@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Prize : MonoBehaviour
 {
+    EscapeDoor parent_door;
+
     // Start is called before the first frame update
-    void Start() { }
+    void Start()
+    {
+        parent_door = GetComponentInParent<EscapeDoor>();
+    }
    
     // Update is called once per frame
     void Update() { }
@@ -14,7 +19,8 @@ public class Prize : MonoBehaviour
     {
         if (other.name == "Thief")
         {
-            Destroy(this.gameObject); // puede que esto también sea una barbaridad
+            Destroy(this.gameObject);
+            parent_door.prizes.Remove(this);
         }
     }
 
