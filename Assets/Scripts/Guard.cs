@@ -101,7 +101,8 @@ public class Guard : MonoBehaviour
                 if (distanceToTarget < capture_range)
                 {
                     print("El ladrón ha sido capturado.");
-                    //Destroy(thief);
+                    agent.speed = 0f;
+                    thief.GetComponent<Thief>().movementSpeed = 0f;
                 }
                 
                 Ray ray = new Ray(transform.position, directionToTarget);
