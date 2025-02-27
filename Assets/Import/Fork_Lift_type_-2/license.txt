@@ -1,0 +1,11 @@
+Model Information:
+* title:	Fork Lift type -2
+* source:	https://sketchfab.com/3d-models/fork-lift-type-2-b18eb838c99b4eb4af18c0b94fb448c5
+* author:	Saju.Sathish (https://sketchfab.com/Saju.Sathish)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Fork Lift type -2" (https://sketchfab.com/3d-models/fork-lift-type-2-b18eb838c99b4eb4af18c0b94fb448c5) by Saju.Sathish (https://sketchfab.com/Saju.Sathish) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
