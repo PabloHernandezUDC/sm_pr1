@@ -52,8 +52,8 @@ public class Guard : MonoBehaviour
         StartCoroutine(FOVRoutine());
 
         line = GetComponent<LineRenderer>();
-        line.startWidth = 0.2f;
-        line.endWidth = 0.8f;
+        line.startWidth = 3;
+        line.endWidth = 12f;
 
         rend = GetComponent<Renderer>();
         blink_time = 0;
