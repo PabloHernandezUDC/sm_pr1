@@ -1,0 +1,11 @@
+Model Information:
+* title:	Topography around Jena, Germany
+* source:	https://sketchfab.com/3d-models/topography-around-jena-germany-7cb17c4e0cff4f5f964ce7090f758edc
+* author:	Jena Structures & Tectonics (https://sketchfab.com/Wu.KaiMi)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Topography around Jena, Germany" (https://sketchfab.com/3d-models/topography-around-jena-germany-7cb17c4e0cff4f5f964ce7090f758edc) by Jena Structures & Tectonics (https://sketchfab.com/Wu.KaiMi) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)

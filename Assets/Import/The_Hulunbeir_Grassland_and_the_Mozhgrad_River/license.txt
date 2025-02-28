@@ -1,0 +1,11 @@
+Model Information:
+* title:	The Hulunbeir Grassland and the Mozhgrad River
+* source:	https://sketchfab.com/3d-models/the-hulunbeir-grassland-and-the-mozhgrad-river-d13b2156ab19423380d9735774b9be54
+* author:	Metazeon (https://sketchfab.com/Metazeon)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "The Hulunbeir Grassland and the Mozhgrad River" (https://sketchfab.com/3d-models/the-hulunbeir-grassland-and-the-mozhgrad-river-d13b2156ab19423380d9735774b9be54) by Metazeon (https://sketchfab.com/Metazeon) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

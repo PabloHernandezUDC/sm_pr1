@@ -1,0 +1,11 @@
+Model Information:
+* title:	Colt Plain Rock Art area
+* source:	https://sketchfab.com/3d-models/colt-plain-rock-art-area-aad2abe049c042d6902a83aacea35faf
+* author:	England's Rock Art Archive (https://sketchfab.com/EnglandsRockArt)
+
+Model License:
+* license type:	CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions can not be distributed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Colt Plain Rock Art area" (https://sketchfab.com/3d-models/colt-plain-rock-art-area-aad2abe049c042d6902a83aacea35faf) by England's Rock Art Archive (https://sketchfab.com/EnglandsRockArt) licensed under CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)

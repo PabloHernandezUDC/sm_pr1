@@ -1,0 +1,11 @@
+Model Information:
+* title:	Dunstanburgh Castle, Northumberland
+* source:	https://sketchfab.com/3d-models/dunstanburgh-castle-northumberland-873a5940ff164e44bb127cae790715f0
+* author:	GeoLan 3D (https://sketchfab.com/GeoLan3D)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Dunstanburgh Castle, Northumberland" (https://sketchfab.com/3d-models/dunstanburgh-castle-northumberland-873a5940ff164e44bb127cae790715f0) by GeoLan 3D (https://sketchfab.com/GeoLan3D) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

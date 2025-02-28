@@ -1,0 +1,11 @@
+Model Information:
+* title:	Grassland
+* source:	https://sketchfab.com/3d-models/grassland-960494e8e6694ae3bae0c333f0809505
+* author:	zihyfw (https://sketchfab.com/zihyfw)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Grassland" (https://sketchfab.com/3d-models/grassland-960494e8e6694ae3bae0c333f0809505) by zihyfw (https://sketchfab.com/zihyfw) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

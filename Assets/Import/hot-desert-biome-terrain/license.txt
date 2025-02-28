@@ -1,0 +1,11 @@
+Model Information:
+* title:	hot-desert-biome-terrain
+* source:	https://sketchfab.com/3d-models/hot-desert-biome-terrain-ca668f2d513b4e9ca8289eb61dd15975
+* author:	TEGMY (https://sketchfab.com/TEGMY)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "hot-desert-biome-terrain" (https://sketchfab.com/3d-models/hot-desert-biome-terrain-ca668f2d513b4e9ca8289eb61dd15975) by TEGMY (https://sketchfab.com/TEGMY) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
