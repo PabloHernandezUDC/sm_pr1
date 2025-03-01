@@ -7,71 +7,72 @@ using UnityEngine.AI;
 
 public class Guard : MonoBehaviour
 {
+
+
     /*
     
     Comportamiento del agente guardia:
 
-    IF      el ladrón está lo bastante cerca    THEN lo captura
-    ELSE IF ve al ladrón                        THEN lo persigue
-    ELSE IF ha visto al ladrón                  THEN patrulla cerca del premio
-    ELSE                                             patrulla con normalidad
+    IF      el ladrón está lo bastante cerca THEN lo captura
+    ELSE IF ve al ladrón                     THEN lo persigue
+    ELSE IF ha visto al ladrón               THEN patrulla cerca del premio
+    ELSE                                          patrulla con normalidad
     
     */
 
-    public float radius;
+
+    // Referencias a otros objetos y componentes
+    public GameObject thief, guarded_prize;
+    public LayerMask target_mask, obstruction_mask;
+    Transform trans;
+    NavMeshAgent agent;
+
+    // Patrulla y persecución
+    public List<Transform> patrol_points;
+    int current_target;
+    public int max_chase_time; // en segundos
+    float chase_time;
+    bool patrolling;
+    
+    // Vista
     [Range(0, 360)]
     public float angle;
     public float capture_range;
-
-    public GameObject thief, guarded_prize;
-
-    public LayerMask target_mask, obstruction_mask;
-
-    bool can_see_player;
+    public float radius;
     bool alert_mode;
-    LineRenderer line;
+    bool can_see_player;
 
-    Transform trans;
-    NavMeshAgent agent;
-    public List<Transform> patrol_points;
-    
+    // Gráficos
+    LineRenderer line;
     Renderer rend;
     const float BLINK_INTERVAL = 0.5f;
     float blink_time;
     public Material mat1, mat2;
-
-    int current_target, n_of_targets;
-
-    bool patrolling;
-    float chase_time;
-    public int max_chase_time;
 
 
     private void Start()
     {
         StartCoroutine(FOVRoutine());
 
-        line = GetComponent<LineRenderer>();
-        line.startWidth = 3;
-        line.endWidth = 12f;
-
-        rend = GetComponent<Renderer>();
-        blink_time = 0;
-
         trans = GetComponent<Transform>();
         agent = GetComponent<NavMeshAgent>();
         agent.destination = patrol_points.First().position;
 
         current_target = 0;
-        n_of_targets = patrol_points.Count;
         patrolling = true;
         chase_time = 0;
+
+        rend = GetComponent<Renderer>();
+        line = GetComponent<LineRenderer>();
+        line.startWidth = 3;
+        line.endWidth = 12f;
+        blink_time = 0;
 
     }
 
     private IEnumerator FOVRoutine()
     {
-        WaitForSeconds wait = new WaitForSeconds(0.016f);
+        WaitForSeconds wait = new(0.016f);
 
         while (true)
         {
@@ -104,11 +105,10 @@ public class Guard : MonoBehaviour
                     Debug.Break();
                 }
                 
-                Ray ray = new Ray(transform.position, directionToTarget);
-                RaycastHit hit;
+                Ray ray = new(transform.position, directionToTarget);
 
 
-                if (Physics.Raycast(ray, out hit, distanceToTarget, obstruction_mask))
+                if (Physics.Raycast(ray, out RaycastHit hit, distanceToTarget, obstruction_mask))
                 {
                     // la vista está obstruida
                     can_see_player = false;
@@ -134,7 +134,6 @@ public class Guard : MonoBehaviour
                         agent.speed *= 1.2f;
                         patrol_points.RemoveRange(1, patrol_points.Count - 1);
                         patrol_points.Add(guarded_prize.transform);
-                        n_of_targets = patrol_points.Count;
                     }
                 }
             }
@@ -153,16 +152,16 @@ public class Guard : MonoBehaviour
             if (trans.position.x == agent.destination.x && trans.position.z == agent.destination.z)
             {
                 current_target++;
-                agent.destination = patrol_points[current_target % n_of_targets].position;
+                agent.destination = patrol_points[current_target % patrol_points.Count].position;
             }
         }
         else
         {
-            // si ha pasado demasiado tiempo, dejamos de perseguir volvemos a patrullar
+            // si ha pasado demasiado tiempo, dejamos de perseguir y volvemos a patrullar
             if (chase_time >= max_chase_time)
             {
                 patrolling = true;
-                agent.destination = patrol_points[current_target % n_of_targets].position;
+                agent.destination = patrol_points[current_target % patrol_points.Count].position;
             }
             else // si no, actualizamos la posición y seguimos persiguiendo
             {
