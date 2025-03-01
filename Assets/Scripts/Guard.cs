@@ -97,12 +97,11 @@ public class Guard : MonoBehaviour
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-                // si el ladrón está lo suficientemente cerca, lo capturamos
+                // si el ladrón está lo suficientemente cerca, lo capturamos y paramos la ejecución
                 if (distanceToTarget < capture_range)
                 {
                     print("El ladrón ha sido capturado.");
-                    agent.speed = 0f;
-                    thief.GetComponent<Thief>().movementSpeed = 0f;
+                    Debug.Break();
                 }
                 
                 Ray ray = new Ray(transform.position, directionToTarget);
