@@ -25,6 +25,7 @@ public class EscapeDoor : MonoBehaviour
         if (prizes.Count == 0)
         {
             print("¡Enhorabuena! ¡Has robado todos los objetos!");
+            Debug.Break();
         }
         else
         {

@@ -28,7 +28,9 @@ public class Guard : MonoBehaviour
     NavMeshAgent agent;
 
     // Patrulla y persecución
-    public List<Transform> patrol_points;
+    List<Transform> current_patrol;
+    List<Transform> alert_patrol;
+    public List<Transform> regular_patrol;
     int current_target;
     public int max_chase_time; // en segundos
     float chase_time;
@@ -54,13 +56,17 @@ public class Guard : MonoBehaviour
     {
         StartCoroutine(FOVRoutine());
 
-        trans = GetComponent<Transform>();
-        agent = GetComponent<NavMeshAgent>();
-        agent.destination = patrol_points.First().position;
-
+        alert_patrol = new List<Transform>();
+        current_patrol = regular_patrol;
+        alert_patrol.Add(regular_patrol.First());
+        alert_patrol.Add(guarded_prize.transform);
+        
         current_target = 0;
         patrolling = true;
-        chase_time = 0;
+
+        trans = GetComponent<Transform>();
+        agent = GetComponent<NavMeshAgent>();
+        agent.destination = regular_patrol.First().position;
 
         rend = GetComponent<Renderer>();
         line = GetComponent<LineRenderer>();
@@ -89,11 +95,10 @@ public class Guard : MonoBehaviour
 
         if (rangeChecks.Length != 0)
         {
-            // cogemos su posición y la distancia hasta él
+            // cogemos su posición y dirección
             Transform target = rangeChecks[0].transform;
             Vector3 directionToTarget = (target.position - transform.position).normalized;
 
-            // si está en nuestro "campo de vista" y la línea de visión no está obstruida, significa que podemos verlo
             if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
@@ -105,20 +110,17 @@ public class Guard : MonoBehaviour
                     Debug.Break();
                 }
                 
+                // disparamos un rayo hacia el ladrón para comprobar si la línea de visión está obstruida
                 Ray ray = new(transform.position, directionToTarget);
-
-
                 if (Physics.Raycast(ray, out RaycastHit hit, distanceToTarget, obstruction_mask))
                 {
-                    // la vista está obstruida
                     can_see_player = false;
                 }
                 else
                 {
-                    // lo vemos sin obstrucciones
                     can_see_player = true;
                     patrolling = false;
-                    chase_time = 0;
+                    chase_time = 0; // iniciamos el temporizador de la persecución
 
                     // y dibujamos la línea hasta el jugador
                     var points = new Vector3[2];
@@ -132,8 +134,6 @@ public class Guard : MonoBehaviour
                     {
                         alert_mode = true;
                         agent.speed *= 1.2f;
-                        patrol_points.RemoveRange(1, patrol_points.Count - 1);
-                        patrol_points.Add(guarded_prize.transform);
                     }
                 }
             }
@@ -148,20 +148,30 @@ public class Guard : MonoBehaviour
     {
         if (patrolling)
         {
+            if (alert_mode & !guarded_prize.GetComponent<Prize>().picked_up)
+            {
+                current_patrol = alert_patrol;
+            }
+            else
+            {
+                current_patrol = regular_patrol;
+            }
+
             // si hemos llegado a un destino, pasamos al siguiente
             if (trans.position.x == agent.destination.x && trans.position.z == agent.destination.z)
             {
                 current_target++;
-                agent.destination = patrol_points[current_target % patrol_points.Count].position;
+                agent.destination = current_patrol[current_target % current_patrol.Count].position;
             }
         }
         else
         {
-            // si ha pasado demasiado tiempo, dejamos de perseguir y volvemos a patrullar
+            // si ha pasado demasiado tiempo, dejamos de perseguir y volvemos a patrullar pero más rápido
             if (chase_time >= max_chase_time)
             {
                 patrolling = true;
-                agent.destination = patrol_points[current_target % patrol_points.Count].position;
+                agent.speed *= 1.4f;
+                agent.destination = current_patrol.First().position;
             }
             else // si no, actualizamos la posición y seguimos persiguiendo
             {

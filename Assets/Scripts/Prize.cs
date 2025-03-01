@@ -6,7 +6,7 @@ public class Prize : MonoBehaviour
 {
     EscapeDoor parent_door;
     Renderer rend;
-    bool picked_up;
+    public bool picked_up;
 
     // Start is called before the first frame update
     void Start()
